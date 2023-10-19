@@ -8,7 +8,7 @@ body {
     gap: 1vw;
     height: 100vh;
     margin: 0;
-    background: #6DB7E1 url('sparkles.png') repeat; /* Light blue background color with sparkles */
+    background: #6DB7E1; /* Light blue background color with sparkles */
     color: white;
 }
 
