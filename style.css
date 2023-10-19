@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* gap: 10vw; */
+    gap: 1vw;
     height: 100vh;
     margin: 0;
     background: #6DB7E1 url('sparkles.png') repeat; /* Light blue background color with sparkles */
@@ -14,6 +14,14 @@ body {
 
 img#jesus {
     max-height: 70vh; /* Set the max height of Jesus to 70% of the viewport height */
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+img#hands {
+    width: 4em;
 }
 
 .candles {
