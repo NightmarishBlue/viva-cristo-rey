@@ -1,0 +1,113 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* gap: 10vw; */
+    height: 100vh;
+    margin: 0;
+    background: #6DB7E1 url('sparkles.png') repeat; /* Light blue background color with sparkles */
+    color: white;
+}
+
+img#jesus {
+    max-height: 70vh; /* Set the max height of Jesus to 70% of the viewport height */
+}
+
+.candles {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%; /* Limit the width of the candle area to 70% of the viewport width */
+}
+
+.candle {
+    /* width: 10vw; Set the width of the candles to 10% of the viewport width */
+    max-height: 35vh; /* Limit the maximum height of the candles to 20% of the viewport height */
+    position: relative;
+    animation: candleAnimation 2s infinite alternate ease; /* Make the candles bounce */
+}
+
+.candle.right {
+    animation-delay: 0.5s;
+}
+
+@keyframes candleAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/*
+    Sparkly background
+*/
+#sparkle-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.sparkle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url(./sparkle.webp);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100% 100%;
+    overflow: hidden;
+    z-index: 2;
+    color: tansparent;
+    -moz-opacity: 0.0;
+    opacity: 0.0;
+    animation: glitter 6s linear 0s infinite normal;
+    -webkit-animation: glitter 6s linear 0s infinite normal;
+    -moz-animation: glitter 8s linear 0s infinite normal;
+    -ms-animation: glitter 8s linear 0s infinite normal;
+    -o-animation: glitter 8s linear 0s infinite normal;
+}
+
+.sparkle.small {
+    width: 20px;
+    height: 20px;
+}
+
+.sparkle.medium {
+    width: 30px;
+    height: 30px;
+}
+
+.sparkle.large {
+    width: 50px;
+    height: 50px;
+}
+
+@-webkit-keyframes glitter {
+    0% {
+      -webkit-transform: scale(0.3) rotate(0deg);
+      opacity: 0;
+    }
+    25% {
+      -webkit-transform: scale(1) rotate(360deg);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: scale(0.3) rotate(720deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(0.3) rotate(0deg);
+      opacity: 0;
+    }
+  }
